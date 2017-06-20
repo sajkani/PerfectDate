@@ -1,0 +1,66 @@
+/* Media Queries */
+
+@media only screen (max-width: 414px) {
+    /*Opening Page*/
+    #eventImage {
+        z-index: 3;
+
+    }
+    .textAbovePerfectButton {
+        z-index: 4;
+        text-align: center;
+        position: absolute;
+        left: 50%;
+        top: 60%;
+    }
+    #perfectButton {
+        left: 50%;
+        top: 55%;
+    }
+    #movieImage,
+    #eventImage {
+        display: inline-block;
+        z-index: 1;
+        -webkit-filter: brightness(80%);
+    }
+    #movieImage:hover {
+        -webkit-filter: none;
+        z-index: 2;
+    }
+    #eventImage:hover {
+        -webkit-filter: none;
+        z-index: 2;
+    }
+
+    .panel-body{
+        padding: none;
+    }
+
+    #mapHolder {
+        width: 200px;
+        float: left;
+    }
+
+    .footer {
+    width: 320px;
+    }
+     /*#movieImage {
+        left: 0;
+        width: 50%;
+    }
+    #eventImage {
+        left:50%;
+        width: 50%
+        top:0;
+        bottom: 0;
+    }
+    main page
+    #mapHolder{
+        height: 200px;
+        width: 400px;
+    }
+    #movieEventHolder {
+        height: 200px;
+        width: 400px;
+    }
+}*/

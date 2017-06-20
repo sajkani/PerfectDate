@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Perfect Date</title>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+    <!--Google Fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Comfortaa:300,400" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Josefin+Slab:400,600" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" text="text/css" href="assets/css/reset.css">
+    <link rel="stylesheet" text="text/css" href="assets/css/style.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/style2.css">
+    <!-- Firebase -->
+    <script src="https://www.gstatic.com/firebasejs/4.1.2/firebase.js"></script>
+    <!-- jQuery -->
+    <script src="https://
+code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <!--Top Header For Logo and Opening Page-->
+    <div class="container-fluid">
+        <div>
+            <img id="headerLogo" src="assets/images/Perfect_Date_Logo.png">
+        </div>
+        <div id="openingPage">
+            <!--Perfect My Date-->
+            <p class="textAbovePerfectButton">Let us set up your Perfect Date</p>
+            <button type="button" id="perfectButton" class="btn btn-default">Perfect My Date!</button>
+            <!--Animated Images for Home Screen -->
+            <div class="mobileImage" id="loadImages">
+                <img id="movieImage" src="assets/images/theater_mainImage.png">
+                <img id="eventImage" src="assets/images/concertEvent_mainImage.png">
+            </div>
+        </div>
+    </div>
+    <!--Main Page After Click Event-->
+    <div class="container">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="row searchCriteria">
+            <div class="col-md-12">
+                <div class="row">
+                    <!-- Forms for Searching Criteria -->
+                    <form class="navbar-form">
+                        <div class="col-md-4 searchContainer">
+                            <div class="formText">
+                                <p>Movie Title:</p>
+                            </div>
+                            <br>
+                            <input type="text" name="name">
+                            <button type="button" class="btn btn-default">Submit</button>
+                        </div>
+                        <div class="col-md-4 searchContainer">
+                            <div class="formText">
+                                <p>Event:</p>
+                            </div>
+                            <br>
+                            <input type="text" name="name">
+                            <button type="button" class="btn btn-default">Submit</button>
+                        </div>
+                        <div class="col-md-4 searchContainer">
+                            <div class="formText">
+                                <p>Zip Code/Location:</p>
+                            </div>
+                            <br>
+                            <input type="text" name="location" id="enteredZipCode">
+                            <button type="button" class="btn btn-default submit" id="zipCode">Submit</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    <!--End of Nav-->
+    <!--Movie/Event Form and Display-->
+    <div class="row mainContainer">
+        <div class="col-md-6">
+            <!--This is where the Movies/Events will display-->
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h3 class="panel-title">Movies/Events</h3>
+                        </div>
+                        <div class="panel-body">
+                            <div id="movieEventHolder">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--This is where the Map will be displayed-->
+        <div class="col-md-6">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h3 class="panel-title">Map of Locations</h3>
+                        </div>
+                        <div class="panel-body">
+                            <div id="mapHolder">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--End of Display-->
+    <!--Restaurants-->
+    <div class="row footer">
+        <div class="col-md-10 col-md-offset-1">
+            <div class="panel panel-default" id="food">
+                <div class="panel-heading">
+                    <h3 class="panel-title">Restaurants</h3>
+                </div>
+                <div class="panel-body">
+                    <div id="restaurantList">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    <!--End Of Container-->
+    <!-- Greensock script -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.1/TweenMax.min.js"></script>
+    <!-- Custom JS -->
+    <script src="assets/javascript/app.js"></script>
+    <script src="assets/javascript/animation.js"></script>
+    <!-- Moment.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.min.js"></script>
+    <!-- Google Maps -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAOKhxps5svUAaZ1Q0ruXbKG8Agm9qAt5A&libraries=places"></script>
+</body>
+
+</html>
